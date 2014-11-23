@@ -109,11 +109,6 @@ typedef NS_ENUM(NSInteger, TypeJSONErrorCode) {
     return self.isObject ? self.value : nil;
 }
 
-- (id)rawValue {
-    return nil;
-}
-
-
 #pragma mark Type Checking
 
 - (BOOL)isTrue {

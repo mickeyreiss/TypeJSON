@@ -81,20 +81,6 @@ extern NSString *TypeJSONErrorDomain;
 ///  @return An NSDictionary to represent the value, or nil if it is not an `object`
 - (NSDictionary *)asObject;
 
-///  Returns the Foundation representation of the current JSON value
-///
-///  The following mapping is used:
-///    String -> NSString
-///    Number -> NSNumber
-///    Object -> NSDictionary
-///    Array  -> NSArray
-///    true   -> @(YES)
-///    false  -> @(NO)
-///    null   -> nil
-///
-///  @return The current value boxed in a `Foundation` type
-- (id)rawValue;
-
 #pragma mark Type Checking
 
 ///  Checks whether value is `true`.
