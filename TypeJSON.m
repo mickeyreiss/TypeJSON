@@ -2,11 +2,11 @@
 
 #import <CoreFoundation/CoreFoundation.h>
 
-NSString *JSONErrorDomain = @"JSONErrorDomain";
+NSString *TypeJSONErrorDomain = @"TypeJSONErrorDomain";
 
-typedef NS_ENUM(NSInteger, JSONErrorCode) {
-    JSONErrorCodeNotFound = 404,
-    JSONErrorCodeNotAcceptable = 406,
+typedef NS_ENUM(NSInteger, TypeJSONErrorCode) {
+    TypeJSONErrorCodeNotFound = 404,
+    TypeJSONErrorCodeNotAcceptable = 406,
 };
 
 @interface TypeJSON ()
@@ -45,8 +45,8 @@ typedef NS_ENUM(NSInteger, JSONErrorCode) {
     return self;
 }
 
-- (instancetype)initWithError:(JSONErrorCode)errorCode {
-    return [self initWithValue:[NSError errorWithDomain:JSONErrorDomain
+- (instancetype)initWithError:(TypeJSONErrorCode)errorCode {
+    return [self initWithValue:[NSError errorWithDomain:TypeJSONErrorDomain
                                                    code:errorCode
                                                userInfo:nil]];
 }
@@ -61,10 +61,10 @@ typedef NS_ENUM(NSInteger, JSONErrorCode) {
         if (newRoot) {
             return [[TypeJSON alloc] initWithValue:newRoot];
         } else {
-            return [[TypeJSON alloc] initWithError:JSONErrorCodeNotFound];
+            return [[TypeJSON alloc] initWithError:TypeJSONErrorCodeNotFound];
         }
     } else {
-        return [[TypeJSON alloc] initWithError:JSONErrorCodeNotAcceptable];
+        return [[TypeJSON alloc] initWithError:TypeJSONErrorCodeNotAcceptable];
     }
 }
 
@@ -75,10 +75,10 @@ typedef NS_ENUM(NSInteger, JSONErrorCode) {
         if (index < [self.value count]) {
             return [[TypeJSON alloc] initWithValue:self.value[index]];
         } else {
-            return [[TypeJSON alloc] initWithError:JSONErrorCodeNotFound];
+            return [[TypeJSON alloc] initWithError:TypeJSONErrorCodeNotFound];
         }
     } else {
-        return [[TypeJSON alloc] initWithError:JSONErrorCodeNotAcceptable];
+        return [[TypeJSON alloc] initWithError:TypeJSONErrorCodeNotAcceptable];
     }
 }
 

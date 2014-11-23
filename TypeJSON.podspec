@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/mickeyreiss/TypeJSON"
   s.license          = "MIT"
   s.author           = { "Mickey Reiss" => "mickeyreiss@gmail.com" }
-  s.source           = { :git => "https://github.com/mickeyreiss/TypeJSON.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/mickeyreiss/TypeJSON.git", :tag => "v#{s.version}" }
 
   s.platform         = :ios, "8.1"
   s.requires_arc     = true

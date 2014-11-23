@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-extern NSString *JSONErrorDomain;
+extern NSString *TypeJSONErrorDomain;
 
 ///  Represents a JSON value, with an Objective-C interface that enables simple type-coersion and
 ///  tree-traversal.

@@ -229,7 +229,7 @@ NSData * dataForFixture(NSString *name);
     TypeJSON *invalidKeyJSON = self.mickeyMouseProfileJSON[@"not_a_key"];
     XCTAssertTrue(invalidKeyJSON.isError);
     NSError *error = invalidKeyJSON.asError;
-    XCTAssertEqualObjects(error.domain, JSONErrorDomain);
+    XCTAssertEqualObjects(error.domain, TypeJSONErrorDomain);
     XCTAssertEqual(error.code, 404);
 }
 
@@ -237,7 +237,7 @@ NSData * dataForFixture(NSString *name);
     TypeJSON *invalidIndexJSON = self.mickeyMouseProfileJSON[@"friends"][999];
     XCTAssertTrue(invalidIndexJSON.isError);
     NSError *error = invalidIndexJSON.asError;
-    XCTAssertEqualObjects(error.domain, JSONErrorDomain);
+    XCTAssertEqualObjects(error.domain, TypeJSONErrorDomain);
     XCTAssertEqual(error.code, 404);
 }
 
@@ -245,7 +245,7 @@ NSData * dataForFixture(NSString *name);
     TypeJSON *invalidKeyJSON = self.mickeyMouseProfileJSON[@"not_a_key"][999][@"some_other_key"];
     XCTAssertTrue(invalidKeyJSON.isError);
     NSError *error = invalidKeyJSON.asError;
-    XCTAssertEqualObjects(error.domain, JSONErrorDomain);
+    XCTAssertEqualObjects(error.domain, TypeJSONErrorDomain);
     XCTAssertEqual(error.code, 404);
 }
 
@@ -253,7 +253,7 @@ NSData * dataForFixture(NSString *name);
     TypeJSON *invalidIndexJSON = self.mickeyMouseProfileJSON[@"friends"][999][@"not_a_key"][888];
     XCTAssertTrue(invalidIndexJSON.isError);
     NSError *error = invalidIndexJSON.asError;
-    XCTAssertEqualObjects(error.domain, JSONErrorDomain);
+    XCTAssertEqualObjects(error.domain, TypeJSONErrorDomain);
     XCTAssertEqual(error.code, 404);
 }
 
@@ -261,7 +261,7 @@ NSData * dataForFixture(NSString *name);
     TypeJSON *notAnObjectJSON = self.mickeyMouseProfileJSON[@"animated"][@"friends"];
     XCTAssertTrue(notAnObjectJSON.isError);
     NSError *error = notAnObjectJSON.asError;
-    XCTAssertEqualObjects(error.domain, JSONErrorDomain);
+    XCTAssertEqualObjects(error.domain, TypeJSONErrorDomain);
     XCTAssertEqual(error.code, 406);
 }
 
@@ -269,7 +269,7 @@ NSData * dataForFixture(NSString *name);
     TypeJSON *notAnObjectJSON = self.mickeyMouseProfileJSON[999];
     XCTAssertTrue(notAnObjectJSON.isError);
     NSError *error = notAnObjectJSON.asError;
-    XCTAssertEqualObjects(error.domain, JSONErrorDomain);
+    XCTAssertEqualObjects(error.domain, TypeJSONErrorDomain);
     XCTAssertEqual(error.code, 406);
 }
 
@@ -286,7 +286,6 @@ NSData * dataForFixture(NSString *name);
     id jsonParsedFixtureData = [NSJSONSerialization JSONObjectWithData:dataForFixture(@"mickeyMouseProfile") options:0 error:NULL];
     XCTAssertEqualObjects(jsonParsedMickeyMouseProfileAsJSON, jsonParsedFixtureData);
 }
-
 
 @end
 
