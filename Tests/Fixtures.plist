@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>mickeyMouseProfile</key>
+	<data>eyAibmFtZSI6ICJNaWNrZXkgTW91c2UiLCAiZGV0YWlscyI6IHsgImFnZSI6IDEwMiwgInNwZWNpZXMiOiAibW91c2UiIH0sICJhbmltYXRlZCI6IHRydWUsICJmZWxpbmUiOiBmYWxzZSwgImZyaWVuZHMiOiBbIk1pbm5pZSIsICJHb29meSIsICJEb25hbGQiXSwgIndlYWtuZXNzIjogbnVsbCB9</data>
+	<key>invalidJSON</key>
+	<data>eyJmb28iOiAuLi4=</data>
+	<key>arrayJSONFragment</key>
+	<data>WzEsIndvcmQiLG51bGxd</data>
+	<key>stringJSONFragment</key>
+	<data>ImhlbGxvLCB3b3JsZCEi</data>
+	<key>numberJSONFragment</key>
+	<data>NDI=</data>
+	<key>trueJSONFragment</key>
+	<data>dHJ1ZQ==</data>
+	<key>falseJSONFragment</key>
+	<data>ZmFsc2U=</data>
+	<key>nullJSONFragment</key>
+	<data>bnVsbA==</data>
+</dict>
+</plist>
