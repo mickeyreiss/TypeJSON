@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "TypeJSON"
-  s.version          = "0.0.1"
+  s.version          = "0.0.2"
   s.summary          = "Simple, type-safe JSON parsing"
   s.description      = <<-DESC
     A simple JSON parsing library that aims to adhere to the JSON spec with a sprinkle of type safety.
