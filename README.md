@@ -59,6 +59,12 @@ TypeJSON *myJSON = [TypeJSON emptyObject];
 // TODO: Mutator methods
 ```
 
+## TODO
+
+Some missing features include:
+* Add setters that allow you to construct JSON
+* Implement copy-on-write—or at least avoid creating new objects in `-objectForKeyedSubscript:` and `-objectAtIndexedSubscript:`
+
 ## Inspiration
 
 * [swift-json](https://github.com/dankogai/swift-json/)
