@@ -14,7 +14,7 @@ A simple JSON parsing library that aims to adhere to the JSON spec with a sprink
 
 ```objc
 NSData *profileData = [@"{ \"name\": \"Mickey Mouse\", \"details\": { \"age\": 102, \"species\": \"mouse\" }, \"animated\": true, \"friends\": [\"Minnie\", \"Goofy\", \"Donald\"] }" dataUsingEncoding:NSUTF8StringEncoding];
-JSON *profileJSON = [JSON fromData:data];
+TypeJSON *profileJSON = [TypeJSON fromData:data];
 ```
 
 ### Access values with subscript notation and type coersion
@@ -55,9 +55,15 @@ NSData *detailsData = profileJSON["details"].asJSON; // => { "age": 102, "specie
 ### Create JSON from scratch
 
 ```objc
-JSON *myJSON = [JSON emptyObject];
+TypeJSON *myJSON = [TypeJSON emptyObject];
 // TODO: Mutator methods
 ```
+
+## TODO
+
+Some missing features include:
+* Add setters that allow you to construct JSON
+* Implement copy-on-write—or at least avoid creating new objects in `-objectForKeyedSubscript:` and `-objectAtIndexedSubscript:`
 
 ## Inspiration
 
